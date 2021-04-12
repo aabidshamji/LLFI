@@ -325,7 +325,7 @@ def build(buildLLVM, forceMakeLLVM, noGUI):
 
     if (not os.path.exists("MAKESUCCESS")) or forceMakeLLVM:
       print("Running make for LLVM")
-      p = subprocess.call("make", "-j80")
+      p = subprocess.call("make", "-j", "80")
       if p != 0:
         sys.exit(p)
       Touch("MAKESUCCESS")
